@@ -1,0 +1,8 @@
+/* Add this line to import Tailwind CSS styles */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Your other global styles here */
+
+@import './components/react-paginate.css';

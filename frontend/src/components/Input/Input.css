@@ -1,0 +1,9 @@
+.custom_input input {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.error_text {
+  bottom: -25px;
+}

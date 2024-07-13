@@ -1,0 +1,25 @@
+#!/bin/bash
+
+
+# Check if nvm is installed
+if ! command -v nvm &> /dev/null; then
+    echo "nvm is not installed. Installing..."
+    npm install -g nvm
+fi
+
+# Source nvm to make it available in the current shell
+. "$(npm root -g)/nvm/nvm.sh"
+
+# Get the desired Node.js version from .nvmrc
+desired_version=$(cat .nvmrc)
+
+# Check if the desired version is already installed
+if ! nvm ls | grep -q "$desired_version"; then
+    # If not installed, install the desired version
+    echo "Node.js $desired_version is not installed. Installing..."
+    nvm install "$desired_version"
+fi
+
+# Use the desired version
+echo "Using Node.js $desired_version"
+nvm use "$desired_version"

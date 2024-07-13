@@ -1,0 +1,32 @@
+# Dependencies
+node_modules
+
+# package-lock.json since we are using yarn
+package-lock.json
+
+# yarn error logs
+yarn-error.log
+
+# Environment varibales
+*.env
+.env*
+!.env*.example
+
+# Code coverage
+coverage
+
+# build folder
+dist
+
+# docker volume
+data
+
+# data folders
+videos/*
+audio/*
+
+# IDE
+.idea
+
+public/uploads/*
+public/videos/*
